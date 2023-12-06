@@ -10,8 +10,7 @@ def find_last_number(line):
             return char
 
 
-if __name__ == '__main__':
-
+def day_1_part_1():
     sum = 0
     with open("./inputs/Day1Input.txt", "r") as file:
         for line in file:
@@ -19,4 +18,9 @@ if __name__ == '__main__':
             last_digit = find_last_number(line)
             first_number = first_digit + last_digit
             sum += int(first_number)
-    print(sum)
+    return sum
+
+
+if __name__ == '__main__':
+    day_1_solution = day_1_part_1()
+    print(f"Day 1 Solution: {day_1_solution}")
